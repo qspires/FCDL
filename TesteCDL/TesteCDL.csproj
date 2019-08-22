@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4601B68-68B6-41EA-8E60-3C7C9A44D5A2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TesteCDL</RootNamespace>
+    <AssemblyName>TesteCDL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\wsConsulta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wsConsulta\ConsultaSpcscService.wsdl" />
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.CadastrarAssociadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.CancelarAssociadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.CCF11Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.CheckautoSenior94Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ChequeNacional12Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ConfirmacaoVendaConsultaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ConfirmeCadastro90Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ConfirmeRGSC92Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ConfirmeTelefone91Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.DeclaracaoAutomotiva89Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ListarPassagemAConfirmarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConfirmacaoPassagemAConfirmar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaCCF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaCheckautoSenior.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaChequeNacional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaConfirmeCadastro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaConfirmeRGSC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaConfirmeTelefone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaDeclaracaoAutomotiva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaScorePuro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSintesePJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSoPefin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSoProtestoPFPJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcEstadual.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaJunior.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaPerfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaPleno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaRelatorio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcJuridicaSenior.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMasterPefin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMix.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMixMais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMixPefin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMixPerfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcMixTopPFPJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcNacional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcNacionalCCF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcNacionalPefinChequeCCFParcial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcNacionalPefinParcial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcNacionalRFOnline.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusJuniorCCF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusJuniorChequeNacional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMasterProtestoNacional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMasterProtestoSC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMasterProtestoSCPerfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcPlusMasterRFOnline.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSCPefinCompleto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSenior.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSeniorPJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSeniorPlus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSeniorPlusPFPJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcSeniorPlusPJ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaConsultaSpcTopFisica.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.RespostaListagemPassagemAConfirmar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.ScorePuro41Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SintesePJ23Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SoPefin38Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SoProtestoPFPJ22Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCEstadual01Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaJunior24Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaMaster26Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaPerfil30Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaPleno25Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaRelatorio28Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCJuridicaSenior27Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCMaster68Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCMasterPefin39Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SpcMix59Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCMixMais69Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SpcMixPefin58Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCMixPerfil78Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SpcMixTopPFPJ56Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacional02Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacional102Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacionalMaisCCF10Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacionalPefinParcial34Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacionalPefinParcial37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCNacionalRFOnline07Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusJuniorCCF60Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusJuniorChequeNacional61Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SpcPlusMais57Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMaster162Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMaster62Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMasterProtestoNacional64Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMasterProtestoSC65Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMasterProtestoSCPerfil80Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCPlusMasterRFOnline63Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSCPefinCompleto05Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSenior03Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSeniorPJ71Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSeniorPlus66Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSeniorPlusPFPJ166Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCSENIORPLUSPJ36Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsConsulta\TesteCDL.wsConsulta.SPCTopFisica70Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\wsConsulta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsConsulta\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsConsulta\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsConsulta\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
